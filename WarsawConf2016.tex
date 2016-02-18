@@ -157,7 +157,7 @@
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{The non trivial exercise of computing the qFI}
+		\frametitle{The non-trivial exercise of computing the qFI}
 
 		\begin{enumerate}
 			\item<1-> Different forms of the qFI
@@ -187,7 +187,41 @@
 	\subsection{Optimization problem}
 
 		\begin{frame}
+			\frametitle{Optimization: Legendre Transform}
+			\begin{itemize}
+				\item For any kind of function of the state, we construct a \emph{thight lower bound} as follows,
+					{\small \[
+					g(\varrho) \geq
+					\mathcal{B} \big( \{w_k := \expect{W_k}\} \big) = \sup_{\{r_k\}} \big( r \cdot w - \sup_{\varrho} [ r\cdot\expect{W} - g(\varrho) ] \big).
+					\]}
+				\item When $g(\varrho)$ is the infimum over the convex roof, the $2^{\rm nd}$ optimization simplified to pure states only,
+					\begin{block}
+						{}
+						{\small
+						\vspace{8px}
+						\[
+						\mathcal{B}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\ket{\psi}} [ r\cdot\expect{W} - g(\ket{\psi}) ] \big).
+						\]}
+					\end{block}
+			\end{itemize}
 
+			TODO: Cite Otfried.
+
+		\end{frame}
+
+		\begin{frame}
+			\begin{block}
+				{Optimization for the qFI}
+				It is slightly different than for other functions because of the \emph{\color{blue} simplicity of the qFI for pure states}.
+				{\small
+				\[
+				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-\mu)^2 ) ] \big).
+				\]}
+			\end{block}
+
+			Therefore, we have parametrised the optimization, which leads to a \emph{more efficient finding} of the solution.
+
+			TODO: Cite us.
 
 		\end{frame}
 
@@ -206,7 +240,14 @@
 	\subsection{Spin squeezed states}
 
 		\begin{frame}
+			{Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
 
+			\begin{enumerate}
+				\item We use the following 3 operators $\{ J_z,J_x,J_x^2 \}$ to characterize the input state with their respective expectation values.
+				\item In the direction of $\expect{J_x}$ the worst case is it take the value zero
+				\item Therefore the optimisation can be done only for 2 operators $\{ J_z,J_x^2 \}$ and it can be mapep directly to $\expect{J_z},\varian{J_x}$.
+
+			\end{enumerate}
 
 		\end{frame}
 
@@ -220,7 +261,13 @@
 \section{Conclusion and outlook}
 
 	\begin{frame}
-
+		\frametitle{Conclusion and Outlook}
+		\begin{enumerate}
+			\item<1-> We have found that on very interesting cases the optimization case is feasible.
+			\item<2-> We used our approach to verify the tight bounding of one of the inequalities.
+			\item<3-> We have shown that the lower bound can be improved with few extra considerations.
+			\item<4-> It has been show that
+		\end{enumerate}
 
 	\end{frame}
 
