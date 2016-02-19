@@ -243,9 +243,9 @@ Lett. {\bf 98}, 110502 (2007)}
 			\end{itemize}
 			% \onslide{
 			\begin{figure}
-				\includegraphics[height=90px]{img/lb-dickefidelity}
-				\hspace{20px}
 				\includegraphics[height=90px]{img/lb-ghzfidelity.pdf}
+				\hspace{20px}
+				\includegraphics[height=90px]{img/lb-dickefidelity}
 			\end{figure}
 			% }
 
@@ -258,10 +258,31 @@ Lett. {\bf 98}, 110502 (2007)}
 
 			\begin{enumerate}
 				\item We use the following 3 operators $\{ J_z,J_x,J_x^2 \}$ to characterize the input state with their respective expectation values.
-				\item In the direction of $\expect{J_x}$ the worst case is it take the value zero
-				\item Therefore the optimisation can be done only for 2 operators $\{ J_z,J_x^2 \}$ and it can be mapep directly to $\expect{J_z},\varian{J_x}$.
+				\item In the direction of $\expect{J_x}$ the worst case is when it takes the \emph{\color{blue}value zero}.
+				\item Therefore, the optimisation can be accomplished only for 2 operators $\{ J_z,J_x^2 \}$ while it is mapped directly to $\expect{J_z},\varian{J_x}$.
 
 			\end{enumerate}
+
+		\end{frame}
+
+		\begin{frame}
+			\begin{itemize}
+				\item We numerically optimise the lower bound of qFI for a 4 particle system for all possible values of $\expect{J_z}$ and $\varian{J_x}$.
+			\end{itemize}
+			\begin{figure}
+				\includegraphics[height=120px]{img/lb-spsq.pdf}
+				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. The crossed point to be extended next. It shows an extremely similarity with $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$, TODO}
+			\end{figure}
+
+		\end{frame}
+
+		\begin{frame}
+			\begin{itemize}
+				\item For the crossed point, we now study what happens with the extra information of a $3^{\rm rd}$ expectation value.
+			\end{itemize}
+			\begin{figure}
+				\includegraphics[height=120px]{img/4thparameter-spsq.pdf}
+			\end{figure}
 
 		\end{frame}
 
