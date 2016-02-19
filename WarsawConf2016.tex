@@ -189,12 +189,12 @@
 		\begin{frame}
 			\frametitle{Optimization: Legendre Transform}
 			\begin{itemize}
-				\item For any kind of function of the state, we construct a \emph{thight lower bound} as follows,
+				\item For a convex function of the state, we construct a \emph{thight lower bound} as follows,
 					{\small \[
 					g(\varrho) \geq
 					\mathcal{B} \big( \{w_k := \expect{W_k}\} \big) = \sup_{\{r_k\}} \big( r \cdot w - \sup_{\varrho} [ r\cdot\expect{W} - g(\varrho) ] \big).
 					\]}
-				\item When $g(\varrho)$ is the infimum over the convex roof, the $2^{\rm nd}$ optimization simplified to pure states only,
+				\item When $g(\varrho)$ is deffined as infimum over the convex roof, the $2^{\rm nd}$ optimization simplified to pure states only,
 					\begin{block}
 						{}
 						{\small
@@ -205,23 +205,26 @@
 					\end{block}
 			\end{itemize}
 
-			TODO: Cite Otfried.
+			\citate{O. G\"uhne, M. Reimpell, and R.F. Werner, Phys. Rev.
+Lett. {\bf 98}, 110502 (2007)}
 
 		\end{frame}
 
 		\begin{frame}
 			\begin{block}
 				{Optimization for the qFI}
-				It is slightly different than for other functions because of the \emph{\color{blue} simplicity of the qFI for pure states}.
+				Different because of \emph{\color{blue} simplicity of the qFI for pure states}.
 				{\small
 				\[
 				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-\mu)^2 ) ] \big).
 				\]}
 			\end{block}
+			\begin{itemize}
+				\item Therefore, we have parametrised the optimization, which leads to a \emph{more efficient finding} of the solution.
 
-			Therefore, we have parametrised the optimization, which leads to a \emph{more efficient finding} of the solution.
+			\end{itemize}
 
-			TODO: Cite us.
+			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
 
