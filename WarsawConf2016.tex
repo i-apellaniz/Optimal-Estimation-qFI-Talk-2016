@@ -27,7 +27,7 @@
 	\newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
 	\newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
 	\newcommand{\bsym}[1]{\ensuremath{\boldsymbol{#1}}}
-	\newcommand{\citate}[1]{\footnotesize{\color{gray}[ #1 ]}
+	\newcommand{\citate}[1]{{\footnotesize{\color{gray}[ #1 ]}}
 
 	}
 
@@ -101,7 +101,8 @@
     \usebeamerfont{footline}%
     \usebeamercolor[fg]{footline}%
     \hspace{1em}%
-    \insertframenumber/\inserttotalframenumber
+    {\small\insertframenumber}
+		\vspace{2px}
 	}
 
 \begin{frame}
@@ -124,26 +125,28 @@
 							\[\mathcal{F}[\varrho,J_z]\geq \frac{4(\expect{J_x^2+J_y^2})^2} {2\sqrt{\varian{J_x^2}\varian{J_y^2}} +\expect{J_x^2} -2\expect{J_y^2}(1+\expect{J_x^2}) +6 }
 							\]
 					\end{block}
-					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, New J. Phys. {\bf 17}, 083027 (2015)}
-					\citate{L. Pezz\'e \& A. Smerzi, Phys. Rev. Lett. {\bf 102}, 100401 (2009)}
-					\citate{Z. Zhang \& L.-M. Duan, 2014 New J. Phys. {\bf 16} 103037 (2014)}
+					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP {\bf 17}, 083027 (2015)}
+					\citate{L. Pezz\'e \& A. Smerzi, PRL {\bf 102}, 100401 (2009)}
+					\citate{Z. Zhang \& L.-M. Duan, NJP {\bf 16}, 103037 (2014)}
 				}
 			\only<2->{
 			\item Typically, we only have \emph{\color{blue} a couple of expectation values} to characterize the state.
 				\only<2,3>{\begin{figure}
-  				\includegraphics<2>[height=120px]{img/ghz3-histogram.pdf}
-					\includegraphics<3>[height=120px]{img/ghz3-histogram-banned.pdf}
+  				\includegraphics<2>[height=103px]{img/ghz3-histogram.pdf}
+					\includegraphics<3>[height=103px]{img/ghz3-histogram-banned.pdf}
 				\end{figure}}
 			}
 			\only<4->{
 			\item<4->	The archetypical criteria that demonstrates \emph{\color{blue} useful entanglement} on the state.
 				\only<4>{
 					\[\mathcal{F}[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}}\]
-					\citate{L. Pezz\'e \& A. Smerzi, Phys. Rev. Lett. {\bf 102}, 100401 (2009)}
+					\citate{L. Pezz\'e \& A. Smerzi, PRL {\bf 102}, 100401 (2009)}
+					\vspace{17px}
 				}
 			}
 			\only<5>{
 			\item It is essential either to \emph{\color{blue} verify them or find new ones} for different set of expectation values.
+			\vspace{47px}
 			}
 		\end{enumerate}
 
@@ -159,7 +162,7 @@
 	\begin{frame}
 		\frametitle{The non-trivial exercise of computing the qFI}
 
-		\begin{enumerate}
+		\begin{itemize}
 			\item<1-> Different forms of the qFI
 				\begin{block}
 					{}
@@ -172,6 +175,9 @@
 					\]
 				\end{block}
 
+				\citate{G. T\'oth \& D. Petz, PRA {\bf 87}, 032324 (2013)}
+				\citate{S. Yu, arXiv:1302.5311}
+
 			\item<2-> For pure states it's extremely simple
 				{\small
 				\[
@@ -180,7 +186,7 @@
 				}
 			\item<3-> In the general case, usually \emph{\color{blue} lower bounded} by its \emph{"classical"} counterparts.
 
-		\end{enumerate}
+		\end{itemize}
 
 	\end{frame}
 
@@ -205,9 +211,8 @@
 					\end{block}
 			\end{itemize}
 
-			\citate{O. G\"uhne, M. Reimpell, and R.F. Werner, Phys. Rev.
-Lett. {\bf 98}, 110502 (2007)}
-
+			\citate{O. G\"uhne, M. Reimpell \& R.F. Werner, PRL {\bf 98}, 110502 (2007)}
+			\citate{J. Eisert, F.G.S.L. Brand\~ao \& K.M.R. Audenaert, NJP {\bf 9}, 46 (2007)}
 		\end{frame}
 
 		\begin{frame}
@@ -237,15 +242,15 @@ Lett. {\bf 98}, 110502 (2007)}
 
 		\begin{frame}
 			\begin{itemize}
-				\item We'll present 2 main cases, spin-squeezed states and unpolarized Dicke.
-				\item Though, we apply our method to projectors with great success, we will focus on global $J_{\mathbf n}$ momentums.
+				\item We'll present 2 main cases, spin-squeezed states and unpolarized Dicke states.
+				\item Though, we apply our method to projectors with great success, we will focus on collective $J_{\mathbf n}$ operators.
 				\item One of the cases using projector operators, {\it i.e.}, using the \emph{fidelity} leads to \emph{\color{blue}analytic soulution}!
 			\end{itemize}
 			% \onslide{
 			\begin{figure}
-				\includegraphics[height=90px]{img/lb-ghzfidelity.pdf}
-				\hspace{20px}
-				\includegraphics[height=90px]{img/lb-dickefidelity}
+				\includegraphics[height=110px]{img/lb-ghzfidelity.pdf}
+				\hspace{10px}
+				\includegraphics[height=110px]{img/lb-dickefidelity}
 			\end{figure}
 			% }
 
@@ -257,9 +262,10 @@ Lett. {\bf 98}, 110502 (2007)}
 			{Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
 
 			\begin{enumerate}
-				\item We use the following 3 operators $\{ J_z,J_x,J_x^2 \}$ to characterize the input state with their respective expectation values.
-				\item In the direction of $\expect{J_x}$ the worst case is when it takes the \emph{\color{blue}value zero}.
-				\item Therefore, the optimisation can be accomplished only for 2 operators $\{ J_z,J_x^2 \}$ while it is mapped directly to $\expect{J_z},\varian{J_x}$.
+				\item<1-> We use the following 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$} to characterize the input state with their respective expectation values.
+				\item<2-> In the direction of $\expect{J_x}$ the worst case is when$\expect{J_x}$ takes the \emph{\color{blue}value zero}.
+				\item<3-> Hence, the optimisation can be accomplished \emph{\color{blue} only using 2 operators} $\{ J_z,J_x^2 \}$ while the resulting bound is mapped directly to $\expect{J_z},\varian{J_x}$.
+				\item<4-> Since $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$ can be used too, we compare it with our numerical result.
 
 			\end{enumerate}
 
@@ -270,26 +276,80 @@ Lett. {\bf 98}, 110502 (2007)}
 				\item We numerically optimise the lower bound of qFI for a 4 particle system for all possible values of $\expect{J_z}$ and $\varian{J_x}$.
 			\end{itemize}
 			\begin{figure}
-				\includegraphics[height=120px]{img/lb-spsq.pdf}
-				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. The crossed point to be extended next. It shows an extremely similarity with $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$, TODO}
+				\includegraphics[height=110px]{img/lb-spsq.pdf}
+				\hspace{15px}
+				\includegraphics[height=110px]{img/4thparameter-spsq.pdf}
+				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$.}
 			\end{figure}
-
-		\end{frame}
-
-		\begin{frame}
-			\begin{itemize}
-				\item For the crossed point, we now study what happens with the extra information of a $3^{\rm rd}$ expectation value.
-			\end{itemize}
-			\begin{figure}
-				\includegraphics[height=120px]{img/4thparameter-spsq.pdf}
-			\end{figure}
+			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
 
 	\subsection{Unpolarized Dicke states}
 
 		\begin{frame}
+			\frametitle{Metrology with unpolarised Dicke states}
+			\begin{enumerate}
+				\item<1-> In order to characterize the unpolarized Dicke state, we use these 3 operators, $\{J_x^2,J_y^2,J_z^2\}$, with the following constraint, $\expect{J_x^2}=\expect{J_y^2}$.
+				\item<2-> For $\sum_l \expect{J_l^2} = \tfrac{N}{2} (\tfrac{N}{2}+1)$, {\it i.e.} maximal, the following figure shows an illustrative result  for 6 particles.
+				\begin{figure}
+					\includegraphics[height=120px]{img/upperboundary-dicke.pdf}
+				\end{figure}
 
+			\end{enumerate}
+
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Realistic characterization of Dicke state}
+			Experiment $\rightarrow$
+			\citate{B. L\"ucke {\it et al.}, PRL {\bf 112}, 155304 (2014)}
+
+			\begin{itemize}
+				\item We now consider an interesting experimental case with BECs where the following initial values are measured.
+				\begin{block}{Experimental details of unpolarized Dicke state with BEC}
+					\vspace{-1px}
+					\bea
+					 	&N = 7900 \hspace{80px} \expect{J_z^2}=112\pm 31 &\nnnl
+						&\expect{J_x^2}=\expect{J_y^2}  =  6 \times 10^6 \pm 0.6\times 10^6 &\nnnl
+						\nonumber
+					\eea
+				\end{block}
+
+				\item For that number of particles we developed a \emph{\color{blue}powerful extrapolation} tool.
+			\end{itemize}
+		\end{frame}
+
+		\begin{frame}
+			\frametitle{Extrapolation}
+			Procedure:
+			\begin{enumerate}
+				\item<1-> First, we proportionally increase the expectation values and the unknown bound \emph{\colo{blue}to the symmetric subspace}.
+				\begin{block}
+					{}
+					\[ \expect{J_z^2}_{{\rm sym},N} = 145.69 \quad \expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6 \quad
+					 \mathcal{F} = \gamma \mathcal{F}_{{\rm sym},N}
+					\]
+				\end{block}
+				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform optimisation.
+				\begin{block}
+					{}
+					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N'} \]
+				\end{block}
+				\item<3-> The extrapolation is directly obtained by
+				\begin{block}
+					{}
+					\[ \mathcal{F}_N \approx \frac{N^2}{N'^2} \mathcal{F}_{N'}
+					\]
+				\end{block}
+			\end{enumerate}
+		\end{frame}
+
+		\begin{frame}
+
+			\begin{figure}
+				\includegraphics[height=120px]{img/asymptoticapproach-dicke.pdf}
+			\end{figure}
 
 		\end{frame}
 
