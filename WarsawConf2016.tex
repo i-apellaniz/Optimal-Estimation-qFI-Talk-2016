@@ -67,13 +67,13 @@
 	}
 
 	\author[Iagoba, Matthias, Otfried, G\'eza]{
-		{\bf Iagoba Apellaniz} \inst{1},
+		\textbf{Iagoba Apellaniz} \inst{1},
 		Matthias Kleinmann \inst{1},
 		Otfried Gh\"une \inst{2},
 		\& G\'eza T\'oth \inst{1,3,4}
 	}
 	\institute{
-		{\bf iagoba.apellaniz@gmail.com}\\
+		\textbf{iagoba.apellaniz@gmail.com}\\
 		\vspace{5px}
 		\inst{1}
 		Department of Theoretical Physics, University of the Basque Country, Spain\\
@@ -125,12 +125,12 @@
 							\[F_Q[\varrho,J_z]\geq \frac{4(\expect{J_x^2+J_y^2})^2} {2\sqrt{\varian{J_x^2}\varian{J_y^2}} +\expect{J_x^2} -2\expect{J_y^2}(1+\expect{J_x^2}) +6 }
 							\]
 					\end{block}
-					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP {\bf 17}, 083027 (2015)}
-					\citate{L. Pezz\'e \& A. Smerzi, PRL {\bf 102}, 100401 (2009)}
-					\citate{Z. Zhang \& L.-M. Duan, NJP {\bf 16}, 103037 (2014)}
+					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP \textbf{17}, 083027 (2015)}
+					\citate{L. Pezz\'e \& A. Smerzi, PRL \textbf{102}, 100401 (2009)}
+					\citate{Z. Zhang \& L.-M. Duan, NJP \textbf{16}, 103037 (2014)}
 				}
 			\only<2->{
-			\item Typically, we only have \emph{\color{blue} a couple of expectation values} to characterize the state.
+			\item Typically, we only have \emph{\color{blue} a couple of expectation values} to characterise the state.
 				\only<2,3>{
 				\begin{figure}
   				\includegraphics<2>[height=103px]{img/ghz3-histogram.pdf}
@@ -138,10 +138,10 @@
 				\end{figure}}
 			}
 			\only<4->{
-			\item	The archetypical criteria that demonstrates \emph{\color{blue} useful entanglement} on the state.
+			\item	The archetypical criteria that demonstrates \emph{\color{blue}metrologicaly useful entanglement} on the state.
 				\only<4>{
 					\[ F_Q[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}} \]
-					\citate{L. Pezz\'e \& A. Smerzi, PRL {\bf 102}, 100401 (2009)}
+					\citate{L. Pezz\'e \& A. Smerzi, PRL \textbf{102}, 100401 (2009)}
 					\vspace{17px}
 				}
 			}
@@ -174,9 +174,10 @@
 					  F_Q[\varrho,J_z]=\min_{\{p_k,\ket{\Psi_k}\}} 4\sum_k p_k \varian{J_z}_{\ket{\Psi_k}}
 					\]
 				\end{block}
-
-				\citate{G. T\'oth \& D. Petz, PRA {\bf 87}, 032324 (2013)}
+				\citate{M.G.A. Paris, Int. J. Quant. Inf. \textbf{7}, 125 (2009)}
+				\citate{G. T\'oth \& D. Petz, PRA \textbf{87}, 032324 (2013)}
 				\citate{S. Yu, arXiv:1302.5311}
+				\vspace{2px}
 
 			\item<2-> For pure states it's extremely simple
 				{\small
@@ -190,17 +191,26 @@
 
 	\end{frame}
 
-	\subsection{Optimization problem}
+	\subsection{Optimisation problem}
 
 		\begin{frame}
-			\frametitle{Optimization: Legendre Transform}
+			\frametitle{Optimisation: Legendre Transform}
 			\begin{itemize}
-				\item For a convex function of the state, we construct a \emph{thight lower bound} as follows,
+				\item<1-> For a convex function of the state, we construct a \emph{\color{blue}thight lower bound} as follows,
 					{\small \[
 					g(\varrho) \geq
-					\mathcal{B} \big( \{w_k := \expect{W_k}\} \big) = \sup_{\{r_k\}} \big( r \cdot w - \sup_{\varrho} [ r\cdot\expect{W} - g(\varrho) ] \big).
+					\mathcal{B} \big( \{w_k := \expect{W_k}\} \big) = \sup_{\{r_k\}} \big( r \cdot w - \sup_{\varrho} [ r\cdot\expect{W}_{\varrho} - g(\varrho) ] \big).
 					\]}
-				\item When $g(\varrho)$ is deffined as infimum over the convex roof, the $2^{\rm nd}$ optimization simplified to pure states only,
+
+					\only<1>{\hfill
+					\begin{minipage}{250px}
+						\begin{flushright}\color{gray}
+							The scalar product reads as follows $r \cdot w \equiv \sum_k r_k w_k$ and $r\cdot\expect{W}_{\varrho} \equiv \sum_k r_k \expect{W_k}_{\varrho}$.
+						\end{flushright}
+					\end{minipage}
+					\vspace{-22px}
+					}
+				\item<2-> When $g(\varrho)$ is defined as \emph{\color{blue}infimum over the convex roof}, the $2^{\rm nd}$ optimisation simplified to pure states only,
 					\begin{block}
 						{}
 						{\small
@@ -211,25 +221,25 @@
 					\end{block}
 			\end{itemize}
 
-			\citate{O. G\"uhne, M. Reimpell \& R.F. Werner, PRL {\bf 98}, 110502 (2007)}
-			\citate{J. Eisert, F.G.S.L. Brand\~ao \& K.M.R. Audenaert, NJP {\bf 9}, 46 (2007)}
+			\onslide<2->{\citate{O. G\"uhne, M. Reimpell \& R.F. Werner, PRL \textbf{98}, 110502 (2007)}
+			\citate{J. Eisert, F.G.S.L. Brand\~ao \& K.M.R. Audenaert, NJP \textbf{9}, 46 (2007)}}
 		\end{frame}
 
 		\begin{frame}
 			\begin{block}
-				{Optimization for the qFI}
-				The \emph{\color{blue} simplicity} of qFI for pure states allows to rewrite the optimization
+				{Optimisation for the qFI}
+				The \emph{\color{blue} simplicity} of qFI for pure states allows to rewrite the problem:
 				{\small
 				\[
 				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-\mu)^2 ) ] \big).
 				\]}
 			\end{block}
 			\begin{itemize}
-				\item Therefore, we have parametrised the optimization, which leads to a \emph{more efficient finding} of the solution.
+				\item Therefore, we have parametrised the optimisation, which leads to a \emph{\color{blue}more efficient finding} of the solution.
 
 			\end{itemize}
 
-			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
+			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
 
@@ -242,17 +252,20 @@
 
 		\begin{frame}
 			\begin{itemize}
-				\item We'll present 2 main cases, spin-squeezed states and unpolarized Dicke states.
-				\item Though, we apply our method to projectors with great success, we will focus on collective $J_{\mathbf n}$ operators.
-				\item One of the cases using projector operators, {\it i.e.}, using the \emph{fidelity} leads to \emph{\color{blue}analytic soulution}!
+				\item<1-> We'll present \emph{\color{blue}2 main cases}, spin-squeezed states and unpolarized Dicke states.
+				\item<1-> Though, we apply our method to projectors with great success, we will focus on collective $J_{\mathbf n}$ operators.
+				\vspace{10px}
+
+				\onslide<2->{
+				\begin{figure}
+					\includegraphics[height=110px]{img/lb-ghzfidelity.pdf}
+					\hspace{20px}
+					\includegraphics[height=110px]{img/lb-dickefidelity}
+				\end{figure}
+				\vspace{-10px}
+				}
+				\item<2-> One of the cases using projector operators, {\it i.e.}, using the \emph{fidelity}, leads to \emph{\color{blue}analytic soulution}!
 			\end{itemize}
-			% \onslide{
-			\begin{figure}
-				\includegraphics[height=110px]{img/lb-ghzfidelity.pdf}
-				\hspace{10px}
-				\includegraphics[height=110px]{img/lb-dickefidelity}
-			\end{figure}
-			% }
 
 		\end{frame}
 
@@ -265,8 +278,7 @@
 				\item<1-> We use the following 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$} to characterize the input state with their respective expectation values.
 				\item<2-> In the direction of $\expect{J_x}$ the worst case is when$\expect{J_x}$ takes the \emph{\color{blue}value zero}.
 				\item<3-> Hence, the optimisation can be accomplished \emph{\color{blue} only using 2 operators} $\{ J_z,J_x^2 \}$ while the resulting bound is mapped directly to $\expect{J_z},\varian{J_x}$.
-				\item<4-> Since $F_Q\geq \expect{J_z}^2/\varian{J_x}$ can be used too, we compare it with our numerical result.
-
+				\item<4-> Since $F_Q\geq \expect{J_z}^2/\varian{J_x}$ is a valid lower bound, we compare it with our numerical result.
 			\end{enumerate}
 
 		\end{frame}
@@ -279,19 +291,19 @@
 				\includegraphics[height=110px]{img/lb-spsq.pdf}
 				\hspace{15px}
 				\includegraphics[height=110px]{img/4thparameter-spsq.pdf}
-				\caption{Below the dashed line, $F_Q$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $F_Q\geq \expect{J_z}^2/\varian{J_x}$.}
+				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $F_Q\geq \expect{J_z}^2/\varian{J_x}$.}
 			\end{figure}
-			\vspace{-15px}
-			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
+			\vspace{-18px}
+			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
 
-	\subsection{Unpolarized Dicke states}
+	\subsection{Unpolarised Dicke states}
 
 		\begin{frame}
 			\frametitle{Metrology with unpolarised Dicke states}
 			\begin{enumerate}
-				\item<1-> In order to characterize the unpolarized Dicke state, we use these 3 operators, $\{J_x^2,J_y^2,J_z^2\}$, with the following constraint, $\expect{J_x^2}=\expect{J_y^2}$.
+				\item<1-> In order to characterize the unpolarised Dicke state, we use these 3 operators, $\{J_x^2,J_y^2,J_z^2\}$, with the following constraint, $\expect{J_x^2}=\expect{J_y^2}$.
 				\item<2-> For $\sum_l \expect{J_l^2} = \tfrac{N}{2} (\tfrac{N}{2}+1)$, {\it i.e.} maximal, the following figure shows an illustrative result  for 6 particles.
 				\begin{figure}
 					\includegraphics[height=120px]{img/upperboundary-dicke.pdf}
@@ -302,9 +314,9 @@
 		\end{frame}
 
 		\begin{frame}
-			\frametitle{Realistic characterization of Dicke state}
-			Experiment $\rightarrow$
-			\citate{B. L\"ucke {\it et al.}, PRL {\bf 112}, 155304 (2014)}
+			\frametitle{Realistic characterisation of Dicke state}
+			{\small Experiment $\rightarrow$}
+			\citate{B. L\"ucke {\it et al.}, PRL \textbf{112}, 155304 (2014)}
 
 			\begin{itemize}
 				\item We now consider an interesting experimental case with BECs where the following initial values are measured.
@@ -330,7 +342,7 @@
 						\expect{J_z^2}_{{\rm sym},N} = 145.69 \qquad
 						\expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6
 					\]
-				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform optimisation.
+				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform the optimisation.
 					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N'} \]
 				\item<3-> The extrapolation is directly obtained by
 				\begin{block}
@@ -343,14 +355,14 @@
 
 		\begin{frame}
 			\begin{itemize}
-				\item We are ready to find numerically the lower bound.
+				\item We are ready now to find numerically the lower bound for the experimental case.
 			\end{itemize}
 			\begin{figure}
 				\includegraphics[height=120px]{img/asymptoticapproach-dicke.pdf}
-				\caption{A fast approach to the real value of the bound is obtained with this method.}
+				\caption{The extrapolated lower bound approaches rapidly to the desired value. The points over the line indicate the systems used for optimisation.}
 			\end{figure}
 			\vspace{-15px}
-			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
+			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 		\end{frame}
 
 \section{Conclusion and outlook}
@@ -358,23 +370,48 @@
 	\begin{frame}
 		\frametitle{Conclusion and Outlook}
 		\begin{enumerate}
-			\item<1-> We have found that on very interesting and also realistic cases \emph{\color{blue}the optimization is feasible}.
-			\item<2-> We used \emph{\color{blue}our approach to verify} the tight bounding of one of the inequalities with great success.
+			\item<1-> We have found that for very interesting and realistic cases \emph{\color{blue}the optimisation is feasible}.
+			\item<2-> We used \emph{\color{blue}our approach to verify} the tight bounding of one of the inequalities.
 			\item<3-> We have shown that the lower bounds can be \emph{\color{blue}improved with few extra considerations}.
-			\item<4-> It has been shown also that the \emph{\color{blue}optimisation method can be complemented} with scaling considerations such as the extrapolation for the Dicke state case.
-			\item<5-> This \emph{\color{blue}method is universal} and can be applied elsewhere.
+			\item<4-> It has been shown that the \emph{\color{blue}optimisation method can be complemented} with scaling considerations such as the extrapolation for the Dicke states case.
+			\item<5-> This \emph{\color{blue}method is constructed to be universal} and it could be used in many other situations.
 		\end{enumerate}
 
 	\end{frame}
 
+
+\setbeamertemplate{navigation symbols}{}{%
+
+}
+\section*{}
 	\begin{frame}
-		\emph{\Large Thank you for your attention!}
+		\emph{\LARGE Thank you for your attention!}
 
-		\vspace{5px}
-		Group's home page $\rightarrow$ \emph{\color{blue} https://sites.google.com/site/gedentqopt}
+		\vspace{15px}
+		Groups' home pages
 
-		TODO: Attach more info
+		\hspace{15px} $\rightarrow$ \emph{\color{blue} https://sites.google.com/site/gedentqopt}
 
+		\hspace{15px} $\rightarrow$ \emph{\color{blue} http://www.physik.uni-siegen.de/tqo/}
+		\vspace{10px}
+
+		\begin{figure}
+			\includegraphics[height=60px]{img/authors/iagoba.jpg}
+			\hspace{10px}
+			\includegraphics[height=60px]{img/authors/matthias.jpg}
+			\hspace{10px}
+			\includegraphics[height=60px]{img/authors/otfried.jpg}
+			\hspace{10px}
+			\includegraphics[height=60px]{img/authors/geza.jpg}
+		\end{figure}
+		\vspace{-25px}
+
+		\begin{center}
+			iagoba \hspace{16px}
+			matthias \hspace{16px}
+			otfried \hspace{30px}
+			g\'eza {\color{white}>}
+		\end{center}
 	\end{frame}
 
 \end{document}
