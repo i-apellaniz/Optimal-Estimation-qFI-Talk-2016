@@ -325,18 +325,17 @@
 			\frametitle{Extrapolation}
 			Procedure:
 			\begin{enumerate}
-				\item<1-> First, we proportionally increase the expectation values and the unknown bound \emph{\color{blue}to the symmetric subspace}.
+				\item<1-> First, we equivalently increase the expectation values and the unknown bound \emph{\color{blue}to the symmetric subspace}.
 					\[
 						\expect{J_z^2}_{{\rm sym},N} = 145.69 \qquad
-						\expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6 \qquad
-					 	\mathcal{F} =\frac{1}{\gamma} \mathcal{F}_{{\rm sym},N}
+						\expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6
 					\]
 				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform optimisation.
 					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N'} \]
 				\item<3-> The extrapolation is directly obtained by
 				\begin{block}
 					{}
-					\[ \mathcal{F}_{{\rm sym},N} \approx \frac{N^2}{N'^2} \mathcal{F}_{{\rm sym},N'}
+					\[ \frac{\mathcal{F}}{\sum_l \expect{J_l^2}}\approx  \frac{\mathcal{F}_{{\rm sym},N}}{N^2/4} \approx \frac{\mathcal{F}_{{\rm sym},N'}}{N'^2/4}
 					\]
 				\end{block}
 			\end{enumerate}
@@ -344,7 +343,7 @@
 
 		\begin{frame}
 			\begin{itemize}
-				\item $\gamma$ is found to be TODO. We are ready to find the lower bound.
+				\item We are ready to find numerically the lower bound.
 			\end{itemize}
 			\begin{figure}
 				\includegraphics[height=120px]{img/asymptoticapproach-dicke.pdf}
