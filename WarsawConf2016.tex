@@ -118,11 +118,11 @@
 		  	\only<1>{
 					\begin{block}{Bounds for qFI}
 							\small
-							\[\mathcal{F}[\varrho,J_z]\geq 	\frac{\expect{J_x}^2}{\varian{J_y}},
+							\[F_Q[\varrho,J_z]\geq 	\frac{\expect{J_x}^2}{\varian{J_y}},
 								\qquad\quad
-								\mathcal{F}[\varrho,J_y]\geq \beta^{-2}\frac{\expect{J_x^2+J_z^2}}{\varian{J_z}+\frac{1}{4}},
+								F_Q[\varrho,J_y]\geq \beta^{-2}\frac{\expect{J_x^2+J_z^2}}{\varian{J_z}+\frac{1}{4}},
 							\]
-							\[\mathcal{F}[\varrho,J_z]\geq \frac{4(\expect{J_x^2+J_y^2})^2} {2\sqrt{\varian{J_x^2}\varian{J_y^2}} +\expect{J_x^2} -2\expect{J_y^2}(1+\expect{J_x^2}) +6 }
+							\[F_Q[\varrho,J_z]\geq \frac{4(\expect{J_x^2+J_y^2})^2} {2\sqrt{\varian{J_x^2}\varian{J_y^2}} +\expect{J_x^2} -2\expect{J_y^2}(1+\expect{J_x^2}) +6 }
 							\]
 					\end{block}
 					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP {\bf 17}, 083027 (2015)}
@@ -131,15 +131,16 @@
 				}
 			\only<2->{
 			\item Typically, we only have \emph{\color{blue} a couple of expectation values} to characterize the state.
-				\only<2,3>{\begin{figure}
+				\only<2,3>{
+				\begin{figure}
   				\includegraphics<2>[height=103px]{img/ghz3-histogram.pdf}
 					\includegraphics<3>[height=103px]{img/ghz3-histogram-banned.pdf}
 				\end{figure}}
 			}
 			\only<4->{
-			\item<4->	The archetypical criteria that demonstrates \emph{\color{blue} useful entanglement} on the state.
+			\item	The archetypical criteria that demonstrates \emph{\color{blue} useful entanglement} on the state.
 				\only<4>{
-					\[\mathcal{F}[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}}\]
+					\[ F_Q[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}} \]
 					\citate{L. Pezz\'e \& A. Smerzi, PRL {\bf 102}, 100401 (2009)}
 					\vspace{17px}
 				}
@@ -149,7 +150,6 @@
 			\vspace{47px}
 			}
 		\end{enumerate}
-
 	\end{frame}
 
 \section[QFI based on expectation values]{QFI based on expectation values: Are they optimal?}
@@ -168,10 +168,10 @@
 					{}
 					\small
 					\[
-						\mathcal{F}[\varrho,J_z]=2 \sum_{\lambda,\gamma} \frac{(p_\lambda-p_\gamma)^2}{p_\lambda+p_\gamma} |\braOket{\lambda}{J_z}{\gamma}|^2
+						F_Q[\varrho,J_z]=2 \sum_{\lambda,\gamma} \frac{(p_\lambda-p_\gamma)^2}{p_\lambda+p_\gamma} |\braOket{\lambda}{J_z}{\gamma}|^2
 					\]
 					\[
-					  \mathcal{F}[\varrho,J_z]=\min_{\{p_k,\ket{\Psi_k}\}} 4\sum_k p_k \varian{J_z}_{\ket{\Psi_k}}
+					  F_Q[\varrho,J_z]=\min_{\{p_k,\ket{\Psi_k}\}} 4\sum_k p_k \varian{J_z}_{\ket{\Psi_k}}
 					\]
 				\end{block}
 
@@ -181,7 +181,7 @@
 			\item<2-> For pure states it's extremely simple
 				{\small
 				\[
-					\mathcal{F}[\varrho,J_z] = 4\varian{J_z}
+					F_Q[\varrho,J_z] = 4\varian{J_z}
 				\]
 				}
 			\item<3-> In the general case, usually \emph{\color{blue} lower bounded} by its \emph{"classical"} counterparts.
@@ -218,7 +218,7 @@
 		\begin{frame}
 			\begin{block}
 				{Optimization for the qFI}
-				Different because of \emph{\color{blue} simplicity of the qFI for pure states}.
+				The \emph{\color{blue} simplicity} of qFI for pure states allows to rewrite the optimization
 				{\small
 				\[
 				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-\mu)^2 ) ] \big).
@@ -265,7 +265,7 @@
 				\item<1-> We use the following 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$} to characterize the input state with their respective expectation values.
 				\item<2-> In the direction of $\expect{J_x}$ the worst case is when$\expect{J_x}$ takes the \emph{\color{blue}value zero}.
 				\item<3-> Hence, the optimisation can be accomplished \emph{\color{blue} only using 2 operators} $\{ J_z,J_x^2 \}$ while the resulting bound is mapped directly to $\expect{J_z},\varian{J_x}$.
-				\item<4-> Since $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$ can be used too, we compare it with our numerical result.
+				\item<4-> Since $F_Q\geq \expect{J_z}^2/\varian{J_x}$ can be used too, we compare it with our numerical result.
 
 			\end{enumerate}
 
@@ -279,8 +279,9 @@
 				\includegraphics[height=110px]{img/lb-spsq.pdf}
 				\hspace{15px}
 				\includegraphics[height=110px]{img/4thparameter-spsq.pdf}
-				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $\mathcal{F}\geq \expect{J_z}^2/\varian{J_x}$.}
+				\caption{Below the dashed line, $F_Q$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $F_Q\geq \expect{J_z}^2/\varian{J_x}$.}
 			\end{figure}
+			\vspace{-15px}
 			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
@@ -324,33 +325,33 @@
 			\frametitle{Extrapolation}
 			Procedure:
 			\begin{enumerate}
-				\item<1-> First, we proportionally increase the expectation values and the unknown bound \emph{\colo{blue}to the symmetric subspace}.
-				\begin{block}
-					{}
-					\[ \expect{J_z^2}_{{\rm sym},N} = 145.69 \quad \expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6 \quad
-					 \mathcal{F} = \gamma \mathcal{F}_{{\rm sym},N}
+				\item<1-> First, we proportionally increase the expectation values and the unknown bound \emph{\color{blue}to the symmetric subspace}.
+					\[
+						\expect{J_z^2}_{{\rm sym},N} = 145.69 \qquad
+						\expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6 \qquad
+					 	\mathcal{F} =\frac{1}{\gamma} \mathcal{F}_{{\rm sym},N}
 					\]
-				\end{block}
 				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform optimisation.
-				\begin{block}
-					{}
 					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N'} \]
-				\end{block}
 				\item<3-> The extrapolation is directly obtained by
 				\begin{block}
 					{}
-					\[ \mathcal{F}_N \approx \frac{N^2}{N'^2} \mathcal{F}_{N'}
+					\[ \mathcal{F}_{{\rm sym},N} \approx \frac{N^2}{N'^2} \mathcal{F}_{{\rm sym},N'}
 					\]
 				\end{block}
 			\end{enumerate}
 		\end{frame}
 
 		\begin{frame}
-
+			\begin{itemize}
+				\item $\gamma$ is found to be TODO. We are ready to find the lower bound.
+			\end{itemize}
 			\begin{figure}
 				\includegraphics[height=120px]{img/asymptoticapproach-dicke.pdf}
+				\caption{A fast approach to the real value of the bound is obtained with this method.}
 			\end{figure}
-
+			\vspace{-15px}
+			\citate{{\bf I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 		\end{frame}
 
 \section{Conclusion and outlook}
@@ -358,10 +359,11 @@
 	\begin{frame}
 		\frametitle{Conclusion and Outlook}
 		\begin{enumerate}
-			\item<1-> We have found that on very interesting cases the optimization case is feasible.
-			\item<2-> We used our approach to verify the tight bounding of one of the inequalities.
-			\item<3-> We have shown that the lower bound can be improved with few extra considerations.
-			\item<4-> It has been show that
+			\item<1-> We have found that on very interesting and also realistic cases \emph{\color{blue}the optimization is feasible}.
+			\item<2-> We used \emph{\color{blue}our approach to verify} the tight bounding of one of the inequalities with great success.
+			\item<3-> We have shown that the lower bounds can be \emph{\color{blue}improved with few extra considerations}.
+			\item<4-> It has been shown also that the \emph{\color{blue}optimisation method can be complemented} with scaling considerations such as the extrapolation for the Dicke state case.
+			\item<5-> This \emph{\color{blue}method is universal} and can be applied elsewhere.
 		\end{enumerate}
 
 	\end{frame}
@@ -371,6 +373,8 @@
 
 		\vspace{5px}
 		Group's home page $\rightarrow$ \emph{\color{blue} https://sites.google.com/site/gedentqopt}
+
+		TODO: Attach more info
 
 	\end{frame}
 
