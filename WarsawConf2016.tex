@@ -61,15 +61,15 @@
 
 %%%%%%%%%%%%%%
 % TITLE PAGE %
-\title{Optimal bound on the quantum\\ Fisher Information}
+\title{Optimal bound on the quantum\\ Fisher information}
 
-	\subtitle{\it Based on few initial expectation values of the prove state.
+	\subtitle{\it Based on few initial expectation values.
 	}
 
 	\author[Iagoba, Matthias, Otfried, G\'eza]{
 		\textbf{Iagoba Apellaniz} \inst{1},
 		Matthias Kleinmann \inst{1},
-		Otfried Gh\"une \inst{2},
+		Otfried G\"uhne \inst{2},
 		\& G\'eza T\'oth \inst{1,3,4}
 	}
 	\institute{
@@ -125,24 +125,25 @@
 							\[F_Q[\varrho,J_z]\geq \frac{4(\expect{J_x^2+J_y^2})^2} {2\sqrt{\varian{J_x^2}\varian{J_y^2}} +\expect{J_x^2} -2\expect{J_y^2}(1+\expect{J_x^2}) +6\expect{J_yJ_x^2J_y} }
 							\]
 					\end{block}
-					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP \textbf{17}, 083027 (2015)}
 					\citate{L. Pezz\'e \& A. Smerzi, PRL \textbf{102}, 100401 (2009)}
 					\citate{Z. Zhang \& L.-M. Duan, NJP \textbf{16}, 103037 (2014)}
+					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP \textbf{17}, 083027 (2015)}
+
 				}
 			\only<2->{
 			\item For large systems, we only have \emph{\color{blue} a couple of expectation values} to characterise the state.
 				\only<2,3>{
 				\begin{figure}
-  				\includegraphics<2>[height=103px]{img/ghz3-histogram.pdf}
-					\includegraphics<3>[height=103px]{img/ghz3-histogram-banned.pdf}
+  				\includegraphics<2>[height=107px]{img/ghz3-histogram.pdf}
+					\includegraphics<3>[height=107px]{img/ghz3-histogram-banned.pdf}
 				\end{figure}}
 			}
 			\only<4->{
-			\item	The archetypical criteria that demonstrates \emph{\color{blue}metrologicaly useful entanglement} on the state.
+			\item	The archetypical criteria that demonstrates \emph{\color{blue}metrologicaly useful entanglement} of the state.
 				\only<4>{
 					\[ F_Q[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}} \]
 					\citate{L. Pezz\'e \& A. Smerzi, PRL \textbf{102}, 100401 (2009)}
-					\vspace{17px}
+					\vspace{22px}
 				}
 			}
 			\only<5>{
@@ -185,7 +186,6 @@
 					F_Q[\varrho,J_z] = 4\varian{J_z}
 				\]
 				}
-			\item<3-> In the general case, usually \emph{\color{blue} lower bounded} by its \emph{"classical"} counterparts.
 
 		\end{itemize}
 
@@ -196,27 +196,14 @@
 		\begin{frame}
 			\frametitle{Optimisation: Legendre Transform}
 			\begin{itemize}
-				\item<1-> For a convex function of the state, we construct a \emph{\color{blue}thight lower bound} as follows,
-					{\small \[
-					g(\varrho) \geq
-					\mathcal{B} \big( \{w_k := \expect{W_k}\} \big) = \sup_{\{r_k\}} \big( r \cdot w - \sup_{\varrho} [ r\cdot\expect{W}_{\varrho} - g(\varrho) ] \big).
-					\]}
 
-					\only<1>{\hfill
-					\begin{minipage}{250px}
-						\begin{flushright}\color{gray}
-							The scalar product reads as follows $r \cdot w \equiv \sum_k r_k w_k$ and $r\cdot\expect{W}_{\varrho} \equiv \sum_k r_k \expect{W_k}_{\varrho}$.
-						\end{flushright}
-					\end{minipage}
-					\vspace{-22px}
-					}
-				\item<2-> When $g(\varrho)$ is defined as \emph{\color{blue}infimum over the convex roof}, the $2^{\rm nd}$ optimisation simplified to pure states only,
+				\item<1-> When $g(\varrho)$ is defined as \emph{\color{blue}infimum over the convex roof}, the $2^{\rm nd}$ optimisation simplified to pure states only,
 					\begin{block}
 						{}
 						{\small
 						\vspace{8px}
 						\[
-						\mathcal{B}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - \sup_{\ket{\psi}} [ r\cdot\expect{W} - g(\ket{\psi}) ] \big).
+						g(\varrho)\mathcal{B}(w) = \sup_{r} \big( r w - \sup_{\ket{\psi}} [ r\expect{W} - g(\ket{\psi}) ] \big).
 						\]}
 					\end{block}
 			\end{itemize}
@@ -231,13 +218,15 @@
 				The \emph{\color{blue} simplicity} of qFI for pure states allows to rewrite the problem:
 				{\small
 				\[
+				\mathcal{F}(w) = \sup_{r} \big( r w - {\color{blue}\sup_{\mu} [ \lambda_{\max} ( r W - 4(J_z-{\color{blue}\mu})^2 ) ]} \big).
+				\]}
+
+				For more parameters
+				{\small
+				\[
 				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - {\color{blue}\sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-{\color{blue}\mu})^2 ) ]} \big).
 				\]}
 			\end{block}
-			\begin{itemize}
-				\item Therefore, we have parametrised the optimisation, which leads to a \emph{\color{blue}more efficient finding} of the solution.
-
-			\end{itemize}
 
 			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
@@ -252,8 +241,7 @@
 
 		\begin{frame}
 			\begin{itemize}
-				\item<1-> We'll present \emph{\color{blue}2 main cases}, spin-squeezed states and unpolarized Dicke states.
-				\item<1-> Though, we apply our method to projectors with great success, we will focus on collective $J_{\mathbf n}$ operators.
+				\item<1-> We apply our method to projectors with great success.
 				\vspace{10px}
 
 				\onslide<2->{
@@ -265,6 +253,7 @@
 				\vspace{-10px}
 				}
 				\item<2-> One of the cases using projector operators, {\it i.e.}, using the \emph{fidelity}, leads to \emph{\color{blue}analytic soulution}!
+				\item<3-> Though, in this presentation we will focus on collective $J_{\mathbf n}$ operators.
 			\end{itemize}
 
 		\end{frame}
@@ -272,7 +261,19 @@
 	\subsection{Spin squeezed states}
 
 		\begin{frame}
-			{Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
+
+			\begin{itemize}
+				\item<1-> We'll present \emph{\color{blue}2 main cases}, spin-squeezed states and unpolarized Dicke states.
+			\end{itemize}
+			\begin{center}
+        \colorbox{red}{
+            \begin{minipage}[t]{1.0\textwidth}
+            	\textbf{\large Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
+            \end{minipage}
+      	}
+			\end{center}
+
+			\vspace{8px}
 
 			\begin{enumerate}
 				\item<1-> We use the following 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$} to characterize the input state with their respective expectation values.
