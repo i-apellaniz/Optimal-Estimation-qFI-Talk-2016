@@ -63,7 +63,7 @@
 % TITLE PAGE %
 \title{Optimal bound on the quantum\\ Fisher information}
 
-	\subtitle{\it Based on few initial expectation values.
+	\subtitle{\it Based on few initial expectation values
 	}
 
 	\author[Iagoba, Matthias, Otfried, G\'eza]{
@@ -171,6 +171,7 @@
 					\[
 						F_Q[\varrho,J_z]=2 \sum_{\lambda,\gamma} \frac{(p_\lambda-p_\gamma)^2}{p_\lambda+p_\gamma} |\braOket{\lambda}{J_z}{\gamma}|^2
 					\]
+					\hspace{10px}Alternatively, as convex roof
 					\[
 					  F_Q[\varrho,J_z]=\min_{\{p_k,\ket{\Psi_k}\}} 4\sum_k p_k \varian{J_z}_{\ket{\Psi_k}}
 					\]
@@ -194,28 +195,27 @@
 	\subsection{Optimisation problem}
 
 		\begin{frame}
-			\frametitle{Optimisation: Legendre Transform}
+			\frametitle{Optimisation based on the Legendre Transform}
 			\begin{itemize}
-
-				\item<1-> When $g(\varrho)$ is defined as \emph{\color{blue}infimum over the convex roof}, the $2^{\rm nd}$ optimisation simplified to pure states only,
+				\item When $g(\varrho)$ is a \emph{\color{blue} convex roof}
 					\begin{block}
 						{}
 						{\small
 						\vspace{8px}
 						\[
-						g(\varrho)\mathcal{B}(w) = \sup_{r} \big( r w - \sup_{\ket{\psi}} [ r\expect{W} - g(\ket{\psi}) ] \big).
+						g(\varrho)\geq\mathcal{B}(w:=\tr{\varrho W}) = \sup_{r} \big( r w - \sup_{\ket{\psi}} [ r\expect{W} - g(\ket{\psi}) ] \big).
 						\]}
 					\end{block}
 			\end{itemize}
 
-			\onslide<2->{\citate{O. G\"uhne, M. Reimpell \& R.F. Werner, PRL \textbf{98}, 110502 (2007)}
-			\citate{J. Eisert, F.G.S.L. Brand\~ao \& K.M.R. Audenaert, NJP \textbf{9}, 46 (2007)}}
+			\citate{O. G\"uhne, M. Reimpell \& R.F. Werner, PRL \textbf{98}, 110502 (2007)}
+			\citate{J. Eisert, F.G.S.L. Brand\~ao \& K.M.R. Audenaert, NJP \textbf{9}, 46 (2007)}
 		\end{frame}
 
 		\begin{frame}
 			\begin{block}
 				{Optimisation for the qFI}
-				The \emph{\color{blue} simplicity} of qFI for pure states allows to rewrite the problem:
+				The \emph{\color{blue} simplicity} of qFI for pure states leads to
 				{\small
 				\[
 				\mathcal{F}(w) = \sup_{r} \big( r w - {\color{blue}\sup_{\mu} [ \lambda_{\max} ( r W - 4(J_z-{\color{blue}\mu})^2 ) ]} \big).
@@ -224,11 +224,11 @@
 				For more parameters
 				{\small
 				\[
-				\mathcal{F}(\{w_k\}) = \sup_{\{r_k\}} \big( r\cdot w - {\color{blue}\sup_{\mu} [ \lambda_{\max} ( r\cdot W - 4(J_z-{\color{blue}\mu})^2 ) ]} \big).
+				\mathcal{F}(\mathbf{w}) = \sup_{\mathbf{r}} \big( \mathbf{r}\cdot \mathbf{w} - {\color{blue}\sup_{\mu} [ \lambda_{\max} ( \mathbf{r}\cdot \mathbf{W} - 4(J_z-{\color{blue}\mu})^2 ) ]} \big).
 				\]}
 			\end{block}
 
-			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
+			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"uhne \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
 
@@ -239,9 +239,11 @@
 
 		\end{frame}
 
+	\subsection{Fidelities}
+
 		\begin{frame}
 			\begin{itemize}
-				\item<1-> We apply our method to projectors with great success.
+				\item<1-> Measuring $F_{\rm GHZ}$ and $F_{\rm Dicke}$
 				\vspace{10px}
 
 				\onslide<2->{
@@ -252,49 +254,47 @@
 				\end{figure}
 				\vspace{-10px}
 				}
-				\item<2-> One of the cases using projector operators, {\it i.e.}, using the \emph{fidelity}, leads to \emph{\color{blue}analytic soulution}!
-				\item<3-> Though, in this presentation we will focus on collective $J_{\mathbf n}$ operators.
+				\item<3-> For fidelity of GHZ $\implies$ \emph{\color{blue}analytic soulution}
 			\end{itemize}
-
+			\onslide<3>{\begin{block}
+				{}
+				\[
+				\mathcal{F}=\Theta(F_{\rm GHZ}-0.5)(2F_{\rm GHZ}-1)^2 N^2
+				\]
+			\end{block}}
 		\end{frame}
 
-	\subsection{Spin squeezed states}
+	\subsection{Spin-squeezed states}
 
 		\begin{frame}
 
-			\begin{itemize}
-				\item<1-> We'll present \emph{\color{blue}2 main cases}, spin-squeezed states and unpolarized Dicke states.
-			\end{itemize}
-			\begin{center}
-        \colorbox{red}{
-            \begin{minipage}[t]{1.0\textwidth}
-            	\textbf{\large Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
-            \end{minipage}
-      	}
-			\end{center}
-
-			\vspace{8px}
+			\frametitle{Measuring $\expect{J_z}$ and $\varian{J_x}$ for Spin Squeezed States}
 
 			\begin{enumerate}
-				\item<1-> We use the following 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$} to characterize the input state with their respective expectation values.
-				\item<2-> In the direction of $\expect{J_x}$ the worst case is when$\expect{J_x}$ takes the \emph{\color{blue}value zero}.
-				\item<3-> Hence, the optimisation can be accomplished \emph{\color{blue} only using 2 operators} $\{ J_z,J_x^2 \}$ while the resulting bound is mapped directly to $\expect{J_z},\varian{J_x}$.
-				\item<4-> Since $F_Q\geq \expect{J_z}^2/\varian{J_x}$ is a valid lower bound, we compare it with our numerical result.
+				\item<1-> 3 operators {\color{blue}$\{ J_z,J_x,J_x^2 \}$}
+				\item<2-> Projecting $\mathcal{F}$ onto $\expect{J_x}$ direction
+				\begin{block}{}
+					\[\mathcal{F} \geq \mathcal{F}(\expect{J_x}=0)\]
+					\[\Downarrow\]
+					\[\mathcal{F}(\expect{J_z},{\color{blue}\varian{J_x}}) = \mathcal{F}(\expect{J_z},{\color{blue}\expect{J_x^2}})
+					\]
+				\end{block}
+				\item<3-> Pezze-Smerzi bownd, $F_Q\geq \expect{J_z}^2/\varian{J_x}$, can be verified.
 			\end{enumerate}
 
 		\end{frame}
 
 		\begin{frame}
 			\begin{itemize}
-				\item We numerically optimise the lower bound of qFI for a 4 particle system for all possible values of $\expect{J_z}$ and $\varian{J_x}$.
+				\item 4-particle system
 			\end{itemize}
 			\begin{figure}
 				\includegraphics[height=110px]{img/lb-spsq.pdf}
 				\hspace{15px}
 				\includegraphics[height=110px]{img/4thparameter-spsq.pdf}
-				\caption{Below the dashed line, $\mathcal{F}$ surpasses the shot noise limit. Cross point enhanced with extra parameter. The result shows an extreme similarity with respect to $F_Q\geq \expect{J_z}^2/\varian{J_x}$.}
 			\end{figure}
-			\vspace{-18px}
+			Extreme similarity with respect to P-S bownd $F_Q\geq \expect{J_z}^2/\varian{J_x}$.
+
 			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 
 		\end{frame}
@@ -304,8 +304,8 @@
 		\begin{frame}
 			\frametitle{Metrology with unpolarised Dicke states}
 			\begin{enumerate}
-				\item<1-> For unpolarised Dicke state we use these 3 operators, $\{J_x^2,J_y^2,J_z^2\}$, with the following constraint, $\expect{J_x^2}=\expect{J_y^2}$.
-				\item<2-> For $\sum_l \expect{J_l^2} = \tfrac{N}{2} (\tfrac{N}{2}+1)$, {\it i.e.} maximal, and for 6 particles:
+				\item<1-> 3 operators $\color{blue}\{J_x^2,J_y^2,J_z^2\}$; Constrain $\Rightarrow\expect{J_x^2}=\expect{J_y^2}$.
+				\item<2-> For $\sum_l \expect{J_l^2} = \tfrac{N}{2} (\tfrac{N}{2}+1)$ and 6 particles:
 				\begin{figure}
 					\includegraphics[height=120px]{img/upperboundary-dicke.pdf}
 				\end{figure}
@@ -319,31 +319,30 @@
 			{\small Experiment $\rightarrow$}
 			\citate{B. L\"ucke {\it et al.}, PRL \textbf{112}, 155304 (2014)}
 
-			\begin{itemize}
-				\item We now consider an interesting experimental case with BECs where the following initial values are measured.
 				\begin{block}{Experimental details of unpolarized Dicke state with BEC}
 					\vspace{-1px}
 					\bea
-					 	&N = 7900 \hspace{80px} \expect{J_z^2}=112\pm 31 &\nnnl
+					 	&N ={\color{red} 7900} \hspace{80px} \expect{J_z^2}=112\pm 31 &\nnnl
 						&\expect{J_x^2}=\expect{J_y^2}  =  6 \times 10^6 \pm 0.6\times 10^6 &\nnnl
 						\nonumber
 					\eea
 				\end{block}
 
-				\item For that large system we developed a \emph{\color{blue}successful extrapolation} tool.
+			\begin{itemize}
+				\item For that large system we use \emph{\color{blue} extrapolation}.
 			\end{itemize}
 		\end{frame}
 
 		\begin{frame}
 			\frametitle{Extrapolation:}
 			\begin{enumerate}
-				\item<1-> First, we equivalently increase the expectation values and the unknown bound \emph{\color{blue}to the symmetric subspace}.
+				\item<1-> Map proportionally expectation values and the unknown bound to \emph{\color{blue}symmetric subspace}.
 					\[
 						\expect{J_z^2}_{{\rm sym},N} = 145.69 \qquad
 						\expect{J_x^2}_{{\rm sym},N} = 7.8 \times 10^6
 					\]
-				\item<2-> We freeze $\expect{J_z^2}$ while we reduce the particle number of an \emph{\color{blue}auxiliary system}. Here, we perform the optimisation.
-					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N'} \]
+				\item<2-> Reduce the particle number while keeping $\expect{J_z^2}_{{\rm sym},N}$ constant.
+					\[ 2\expect{J_x^2}_{{\rm sym},N'} = \tfrac{N'}{2}(\tfrac{N'}{2}+1)- \expect{J_z^2}_{{\rm sym},N} \]
 				\item<3-> The extrapolation is directly obtained by
 				\begin{block}
 					{}
@@ -360,9 +359,9 @@
 			\vspace{-10px}
 			\begin{figure}
 				\includegraphics[height=120px]{img/asymptoticapproach-dicke.pdf}
-				\caption{The extrapolated lower bound \emph{\color{blue}approaches rapidly} to the desired value. The points over the line indicate the systems used for optimisation.}
 			\end{figure}
-			\vspace{-15px}
+			The extrapolated lower bound \emph{\color{blue}converges quickly}.
+
 			\citate{\textbf{I.A.}, M. Kleinmann, O. G\"une \& G. T\'oth, arXiv:1511.05203}
 		\end{frame}
 
@@ -371,11 +370,11 @@
 	\begin{frame}
 		\frametitle{Conclusion and Outlook}
 		\begin{enumerate}
-			\item<1-> We have found that for very interesting and realistic cases \emph{\color{blue}the optimisation is feasible}.
-			\item<2-> We used \emph{\color{blue}our approach to verify} the tight bounding of one of the inequalities.
+			\item<1-> We proof that for realistic cases \emph{\color{blue}the optimisation is feasible}.
+			\item<2-> We used \emph{\color{blue}our approach to verify} the tight bounding of P-S inequality.
 			\item<3-> We have shown that the lower bounds can be \emph{\color{blue}improved with few extra considerations}.
-			\item<4-> For large systems the \emph{\color{blue}optimisation method can be complemented} with scaling considerations, such as the extrapolation for Dicke states case.
-			\item<5-> This \emph{\color{blue}method is constructed to be universal} and it could be used in many other situations.
+			\item<4-> For large systems the \emph{\color{blue}optimisation method can be complemented} with scaling considerations.
+			\item<5-> The \emph{\color{blue}method is constructed to be universal} and it could be used in many other situations.
 		\end{enumerate}
 
 	\end{frame}
