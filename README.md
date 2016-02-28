@@ -5,16 +5,19 @@ Information.
 
 ## Organisation of the code
 
-The code is organized as follows. Firts since it is a small project, all 
-the source TeX code is in a single file. Second the images are in a diferent
-folder `img/`. 
+The code is organized as follows. Firts since it is a small project, all
+the source TeX code is in a single file.
+
+Second, the images are in a diferent folder `img/` and the material used for the figures into `img/assets/`. Third about the file organisation, the output PDF should be commited fewer times, just only for big releases.
+
+### Branches and tags
 
 The tags reference to important millestones of the development.
 
-The branches allows for specialised code, for instance, the preparation 
-of the talk for a different conference or for a different speaker, a new 
+The branches allows for specialised code, for instance, the preparation
+of the talk for a different conference or for a different speaker, a new
 branch is initialized.
 
-The more active branch will be `master`. So, it a mate of decision for which
+The more active branch will be `master`. So, it is a decision for which
 conference the developer will make more changes and split into a new branch
-the more static code.
+the more static codes.
