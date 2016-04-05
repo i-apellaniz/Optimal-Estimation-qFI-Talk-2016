@@ -38,6 +38,7 @@
 	\def\bse{\begin{subequations}}
 	\def\ese{\end{subequations}}
 	\def\mtxid{\mathbbm{1}}
+	\def\d{{\rm d}}
 	\def\lpar{\left(}
 	\def\rpar{\right)}
 	\def\lcua{\left[}
@@ -128,16 +129,28 @@
 
 		\item The classical Cram\'er-Rao bound
 			\[
-				\varian{\theta} \ge
+				\varian{\theta} \ge \frac{1}{\mu \color{blue}
+				\int \d x \, p(x|\theta)
+				\lpar \tfrac{\partial \ln(p(x|\theta))}{\partial \theta} \rpar^2}
 			\]
 		\item The quantum CR bound
 			\[
-				\varian{\theta}
+				\varian{\theta} \ge \frac{1}{\mu \color{blue}F_Q}
 			\]
 
-		Fisher information maximised over all possible measurements.
+		\emph{\color{blue}Fisher information} maximised over all measurements.
 
 	\end{itemize}
+
+	\begin{block}{}
+	\[
+		\begin{matrix}
+			\text{\underline{Best separable}} &\qquad \qquad&\text{\underline{Best state}} \\
+			& & \\
+			F_Q \propto N &\qquad \qquad& F_Q \propto N^2
+		\end{matrix}
+	\]
+	\end{block}
 
 \end{frame}
 
