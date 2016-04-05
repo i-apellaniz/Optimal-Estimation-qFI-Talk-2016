@@ -86,7 +86,7 @@
 	}
 
 
-	\date{Recent Advances in Quantum Metrology; Warsaw - 2016}
+	\date{ICE-3 Palma de Mallorca; 2016-04-15}
 
 
 %%%%%%%%%%%%%%%%
@@ -106,6 +106,42 @@
 	}
 
 \begin{frame}
+	\frametitle{Basics on quantum estimation}
+	\only<1->{
+	\begin{figure}
+		\includegraphics<1>[height=130px]{img/evolution-1.pdf}
+		\includegraphics<2>[height=130px]{img/evolution-2.pdf}
+		\includegraphics<3->[height=130px]{img/evolution-3.pdf}
+	\end{figure}
+	}
+	\onslide<1->{
+	\begin{itemize}
+		\item The precision $(\Delta \theta)$ is proportional to {\color{blue}$\sqrt{\mu}$}.} \onslide<4>{But for $N$?
+	\end{itemize}
+	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The quantum Fisher information}
+
+	\begin{itemize}
+
+		\item The classical Cram\'er-Rao bound
+			\[
+				\varian{\theta} \ge
+			\]
+		\item The quantum CR bound
+			\[
+				\varian{\theta}
+			\]
+
+		Fisher information maximised over all possible measurements.
+
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
 	\frametitle{Outline}
 	\tableofcontents
 \end{frame}
@@ -114,8 +150,16 @@
 
 	\begin{frame}
 		\begin{itemize}
-			\item<1-> \emph{\color{blue} Many \bf inequalities} have been proposed to lower bound the quantum Fisher Information.
-		  	\only<1>{
+			\only<1->{
+			\item For large systems, we only have \emph{\color{blue} a couple of expectation values} to characterise the state.
+				\only<1,2>{
+				\begin{figure}
+  				\includegraphics<1>[height=142px]{img/ghz3-histogram.pdf}
+					\includegraphics<2>[height=142px]{img/ghz3-histogram-banned.pdf}
+				\end{figure}}
+			}
+			\item<3-> \emph{\color{blue} Many \bf inequalities} have been proposed to lower bound the quantum Fisher Information.
+		  	\only<3>{
 					\begin{block}{Bounds for qFI}
 						\vspace{4px}
 							\small
@@ -132,29 +176,26 @@
 					\citate{\textbf{I.A.}, B. L\"ucke, J. Peise, C. Klempt \& G. Toth, NJP \textbf{17}, 083027 (2015)}
 
 				}
-			\only<2->{
-			\vspace{10px}
-			\item For large systems, we only have \emph{\color{blue} a couple of expectation values} to characterise the state.
-				\only<2,3>{
-				\begin{figure}
-  				\includegraphics<2>[height=107px]{img/ghz3-histogram.pdf}
-					\includegraphics<3>[height=107px]{img/ghz3-histogram-banned.pdf}
-				\end{figure}}
-			}
 			\only<4->{
-			\vspace{10px}
 			\item	The archetypical criteria that shows \emph{\color{blue}metrologically useful entanglement}.
 				\only<4>{
+				\vspace{14px}
 					\[ F_Q[\varrho,J_z]\geq 	\frac{\expect{J_x}}{\varian{J_z}} \]
 					\citate{L. Pezz\'e \& A. Smerzi, PRL \textbf{102}, 100401 (2009)}
 					\vspace{22px}
+
+				\vspace{40px}
 				}
-				\vspace{5px}
 			}
 			\only<5>{
+			\item It is essential either to \emph{\color{blue} verify them or to find new ones} for different set of expectation values.
 			\vspace{10px}
-			\item It is essential either to \emph{\color{blue} verify them or find new ones} for different set of expectation values.
-			\vspace{27px}
+				\only<5> {
+					\begin{figure}
+						\includegraphics[height=58px]{img/time-to-work.png}
+					\end{figure}
+				}
+			\vspace{10px}
 			}
 		\end{itemize}
 	\end{frame}
@@ -187,7 +228,7 @@
 				\citate{S. Yu, arXiv:1302.5311}
 				\vspace{2px}
 
-			\item<2-> For pure states it's extremely simple
+			\item<2-> For pure states it's \emph{\color{blue}extremely simple}
 				{\small
 				\[
 					F_Q[\varrho,J_z] = 4\varian{J_z}
@@ -252,7 +293,7 @@
 		\begin{frame}
 			\begin{itemize}
 				\item<1-> Measuring $F_{\rm GHZ}$ and $F_{\rm Dicke}$
-				
+
 				\citate{R. Augusiak {\it et al.}, arXiv:1506.08837 (2015)}
 				\vspace{10px}
 
