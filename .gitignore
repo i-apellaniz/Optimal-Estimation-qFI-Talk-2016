@@ -2,5 +2,5 @@
 *.synctex.gz
 pdf/*
 *.eps
-.latex/*
+out/*
 *2016.pdf
