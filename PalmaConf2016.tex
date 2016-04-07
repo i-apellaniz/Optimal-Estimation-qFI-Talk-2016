@@ -23,6 +23,7 @@
 	\newcommand{\ketbra}[2]{\ensuremath{\vert #1 \rangle \! \langle #2 \vert}}
 	\newcommand{\expect}[1]{\ensuremath{\langle #1 \rangle}}
 	\newcommand{\varian}[1]{\ensuremath{\left(\Delta #1 \right)^2}}
+	\newcommand{\standard}[1]{\ensuremath{\left(\Delta #1 \right)}}
 	\newcommand{\ver}[2]{\ensuremath{\genfrac{}{}{0pt}{}{#1}{#2}}}
 	\newcommand{\tr}[1]{\ensuremath{\Tr \lcua #1\rcua}}
 	\newcommand{\trsub}[2]{\ensuremath{\Tr_{#1} \lcua #2 \rcua }}
@@ -108,40 +109,41 @@
 
 \begin{frame}
 	\frametitle{Basics on quantum estimation}
-	\only<1->{
+	\onslide<1->{
 	\begin{figure}
-		\includegraphics<1>[height=130px]{img/evolution-1.pdf}
-		\includegraphics<2>[height=130px]{img/evolution-2.pdf}
-		\includegraphics<3->[height=130px]{img/evolution-3.pdf}
+		\includegraphics<1-2>[height=130px]{img/evolution-1.pdf}
+		\includegraphics<3>[height=130px]{img/evolution-2.pdf}
+		\includegraphics<4->[height=130px]{img/evolution-3.pdf}
 	\end{figure}
 	}
-	\onslide<1->{
+
+	\onslide<2->{
 	\begin{itemize}
-		\item The precision $(\Delta \theta)$ is proportional to {\color{blue}$\sqrt{\mu}$}.} \onslide<4>{But for $N$?
+		\item The precision $\standard{\theta}^{-1}\propto {\color{blue}\sqrt{\mu}}$. \onslide<5>{How it scales with $N$?}
 	\end{itemize}
 	}
+
 \end{frame}
 
 \begin{frame}
 	\frametitle{The quantum Fisher information}
 
 	\begin{itemize}
-
-		\item The classical Cram\'er-Rao bound
+		\item<1-> The classical Cram\'er-Rao bound
 			\[
-				\varian{\theta} \ge \frac{1}{\mu \color{blue}
+				\standard{\theta}^{-1} \le {\sqrt{\mu \color{blue}
 				\int \d x \, p(x|\theta)
-				\lpar \tfrac{\partial \ln(p(x|\theta))}{\partial \theta} \rpar^2}
+				\lpar \tfrac{\partial \ln(p(x|\theta))}{\partial \theta} \rpar^2}}
 			\]
-		\item The quantum CR bound
+		\item<2-> The quantum CR bound
 			\[
-				\varian{\theta} \ge \frac{1}{\mu \color{blue}F_Q}
+				\standard{\theta}^{-1} \le {\sqrt{\mu \color{blue}F_Q}}
 			\]
 
 		\emph{\color{blue}Fisher information} maximised over all measurements.
 
 	\end{itemize}
-
+	\onslide<3>{
 	\begin{block}{}
 	\[
 		\begin{matrix}
@@ -151,7 +153,7 @@
 		\end{matrix}
 	\]
 	\end{block}
-
+	}
 \end{frame}
 
 \begin{frame}
